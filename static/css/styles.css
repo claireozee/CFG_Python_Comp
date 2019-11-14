@@ -1,0 +1,81 @@
+::selection{
+  background: red;
+}
+
+.page{
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+}
+
+.navbar{
+  width: 15vw;
+  background: rgb(230, 230, 230);
+  text-align: center;
+  border-right: solid rgb(196, 196, 196) 2px;
+  font-size: 1em;
+}
+
+.navbar-box{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar-content{
+  display: flex;
+  flex-direction: column;
+}
+
+a{
+  color: black;
+  text-decoration: none;
+  padding: 2em 1em;
+  transition: 0.4s;
+}
+
+a:hover{
+  color: red;
+  background: rgb(196, 196, 196);
+}
+
+a:active{
+  color: white;
+  background: rgb(196, 196, 196);
+}
+
+#mySearch {
+  width: 15vw;
+  border: solid rgb(196, 196, 196) 2px;
+  font-size: 1em;
+}
+
+.page-content{
+  width: 85vw;
+  display: flex;
+  flex-direction: column;
+}
+
+.header{
+  background: pink;
+  border-bottom: red;
+  flex-grow: 1;
+  padding: 1em;
+  background-image: url(/Users/claireozee/documents/cfg_python/cfgsite/cfg_python_comp/static/images/header30.gif);
+  background-position: center;
+  background-size: cover;
+}
+
+.content{
+  border: orange;
+  flex-grow: 3;
+  padding: 1em;
+}
+
+.bodyText{
+  background: yellow;
+  border-bottom: orange;
+  flex-grow: 1;
+  padding: 1em;
+}

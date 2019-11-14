@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>OUR SITE</title>
+        <link rel="stylesheet" href="/Users/claireozee/documents/cfg_python/cfgsite/cfg_python_comp/static/css/stylesnew.css"/>
+    </head>
+
+	<body>
+        <div class="sidenav">
+            <div class="sidenav-buttons">
+                <a href="#about">one</a>                    
+                <a href="#services">two</a>
+                <a href="#clients">three</a>
+                <a href="#contact">Contact us</a>
+            </div>
+            <div id="currently-playing">
+                <span></span>
+            </div>
+        </div>
+                  
+        <div class="main">
+            <div class="header"></div>
+            <div class="content">
+                <div id="one">
+                    <h3>page one</h3>
+                    <p>intro...</p>
+                </div>
+                
+
+                <div id="two">
+                    <h3>page two</h3>
+                </div>
+
+
+                <div id="three">
+                    <p>three</p>
+                </div>
+
+
+                <div id="four">
+                    <p>four</p>
+                </div>
+
+            </div>
+        </div>
+
+
+
+    </body>
+    <script src="/Users/claireozee/documents/cfg_python/cfgsite/cfg_python_comp/static/js/jquery-3.3.1.min.js"></script>
+    <script src="/Users/claireozee/documents/cfg_python/cfgsite/cfg_python_comp/static/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        $( "#about" ).click(function() {
+    $( "#one" ).toggle();
+});
+/*
+            function toggle_visibility(id) {
+               var e = document.getElementById(id);
+               if(e.style.display == 'block')
+                  e.style.display = 'none';
+               else
+                  e.style.display = 'block';
+            }
+*/
+            
+        </script>
+
+
+</html>
+  

@@ -6,11 +6,15 @@ app = Flask("MyExampleApp")
 
 @app.route("/")
 def home_page():
-	return render_template("indexnew.html")
+	return render_template("index.html")
 
-@app.route("/otherpage")
-def other_page():
-	return render_template("other_page.html")
+@app.route("/apipage")
+def song_page():
+	return render_template("apipage.html")
+
+@app.route("/contactus")
+def contact_page():
+	return render_template("contactus.html")
 
 @app.route("/apiexample", methods=["POST"])
 def api_example():

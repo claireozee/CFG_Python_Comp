@@ -2,18 +2,18 @@
 <html>
 
     <head>
-        <title>Join us</title>
-        <link rel="stylesheet" href="/Users/claireozee/documents/cfg_python/cfgsite/cfg_python_comp/static/css/stylesnew.css"/>
+        <title>Contact/join us</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css')}}"/>
     </head>
 
 	<body>
-            <div class="sidenav">
-                <div class="sidenav-buttons">
-                        <a href="/Users/claireozee/documents/cfg_python/cfgsite/cfg_python_comp/templates/indexnew.html">home</a>                    
-                        <a href="/Users/claireozee/documents/cfg_python/cfgsite/cfg_python_comp/templates/apipage.html">song</a>
-                        <a href="#three">three</a>
-                        <a href="/Users/claireozee/documents/cfg_python/cfgsite/cfg_python_comp/templates/contactus.html">Contact us</a>
-                    </div>
+        <div class="sidenav">
+            <div class="sidenav-buttons">
+					<a href="{{ url_for('templates', filename='/index.html')}}">home</a>                    
+					<a href="{{ url_for('templates', filename='/apipage.html')}}">song</a>
+					<a href="#three">three</a>
+					<a href="{{ url_for('templates', filename='/contactus.html')}}">Contact us</a>
+				</div>
                 <div id="currently-playing">
                     <span></span>
                 </div>
@@ -49,10 +49,10 @@
 
 
 
-    </body>
-    <script src="/Users/claireozee/documents/cfg_python/cfgsite/cfg_python_comp/static/js/jquery-3.3.1.min.js"></script>
-    <script src="/Users/claireozee/documents/cfg_python/cfgsite/cfg_python_comp/static/js/bootstrap.min.js"></script>
-    <script type="text/javascript">
+        </body>
+        <script src="{{url_for('static', filename='js/jquery-3.3.1.min.js')}}"></script>
+        <script src="{{url_for('static', filename='js/bootstrap.min.js')}}"></script>
+        <script type="text/javascript">
         $("button").click(function() { 
             alert("Thank you! Your form has been submitted successfully");
             $("joinform").submit(); 

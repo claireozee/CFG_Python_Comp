@@ -8,12 +8,12 @@
 
 	<body>
         <div class="sidenav">
-            <div class="sidenav-buttons">
-					<a href="{{ url_for('templates', filename='/index.html')}}">home</a>                    
-					<a href="{{ url_for('templates', filename='/apipage.html')}}">song</a>
-					<a href="#three">three</a>
-					<a href="{{ url_for('templates', filename='/contactus.html')}}">Contact us</a>
-				</div>
+				<div class="sidenav-buttons">
+						<a href="/index">home</a>                    
+						<a href="/apipage">song</a>
+						<a href="/ehoiew">three</a>
+						<a href="/contactus">Contact us</a>
+					</div>
             <div id="currently-playing">
                 <span></span>
             </div>
@@ -25,13 +25,13 @@
                 <div id="songs">
 					<h3>songs</h3>
 					<p> info about how ....</p>
-					<form id="joinform">
+					<form id="joinform" method='post' action='/apiexample'>
 						<label for="name" >How are you feeling?</label>
 							<select name="feeling" required="required">
-								<option value="1">happy</option>
-								<option value="3">sad</option>
-								<option value="3">excited</option>
-								<option value="4">etc</option>
+								<option value="happy">happy</option>
+								<option value="sad">sad</option>
+								<option value="excited">excited</option>
+								<option value="etc">etc</option>
 							</select>
 						<br>
 						<label for="name">Second question..</label>
@@ -42,6 +42,7 @@
 								<option value="4">4</option>
 							</select>    
 						<br>
+						<input type="submit" value="Submit" id="submit-button">
 					</form>
                 </div>
         

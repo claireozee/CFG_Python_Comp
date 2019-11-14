@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Our site</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css')}}"/>
+    </head>
+
+	<body>
+        <div class="sidenav">
+            <div class="sidenav-buttons">
+					<a href="/index">home</a>                    
+					<a href="/apipage">song</a>
+					<a href="/ehoiew">three</a>
+					<a href="/contactus">Contact us</a>
+				</div>
+            <div id="currently-playing">
+                <span></span>
+            </div>
+        </div>
+                  
+        <div class="main">
+            <div class="header"></div>
+            <div class="content">
+                <div id="home">
+                    <h3>us</h3>
+                    <p>{{songresults}}</p>
+                </div>
+                
+
+
+            </div>
+        </div>
+
+
+
+    </body>
+    <script src="{{url_for('static', filename='js/jquery-3.3.1.min.js')}}"></script>
+    <script src="{{url_for('static', filename='js/bootstrap.min.js')}}"></script>
+    <script type="text/javascript">
+        $( "#about" ).click(function() {
+    $( "#one" ).toggle();
+});
+
+            
+        </script>
+
+
+</html>
+  

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Join us</title>
+        <link rel="stylesheet" href="/Users/claireozee/documents/cfg_python/cfgsite/cfg_python_comp/static/css/stylesnew.css"/>
+    </head>
+
+	<body>
+            <div class="sidenav">
+                <div class="sidenav-buttons">
+                        <a href="/Users/claireozee/documents/cfg_python/cfgsite/cfg_python_comp/templates/indexnew.html">home</a>                    
+                        <a href="/Users/claireozee/documents/cfg_python/cfgsite/cfg_python_comp/templates/apipage.html">song</a>
+                        <a href="#three">three</a>
+                        <a href="/Users/claireozee/documents/cfg_python/cfgsite/cfg_python_comp/templates/contactus.html">Contact us</a>
+                    </div>
+                <div id="currently-playing">
+                    <span></span>
+                </div>
+            </div>
+                      
+            <div class="main">
+                <div class="header"></div>
+                <div class="content">
+                    <div id="songs">
+                        <h3>Join us</h3>
+                        <p>become a member - sign up today for our free 3 day trial!
+                            Join us for just £2.99 per month!</p>
+
+                        <form id="joinform">
+							<div class="form-group">
+								<label for="name" >Your name:</label>
+								<input type="name" name="name" id="name" placeholder="Your name"required="required">
+							</div>
+							<div class="form-group">
+                                <label for="membership">Select your level of commitment:</label>                                    
+                                <select name="membership" required="required">
+                                    <option value="standard">Standard Membership - £2.99 per month</option>
+                                    <option value="bonus">Exclusive Membership - £8.99 per month</option>
+                                    <option value="top tier">Top Tier Membership - £14.99 per month</option>
+                                </select>
+						    </div>
+								<button type="submit" id="form-submit-button">Submit</button>
+						</form>
+
+                    </div>
+                </div>
+            </div>
+
+
+
+    </body>
+    <script src="/Users/claireozee/documents/cfg_python/cfgsite/cfg_python_comp/static/js/jquery-3.3.1.min.js"></script>
+    <script src="/Users/claireozee/documents/cfg_python/cfgsite/cfg_python_comp/static/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        $("button").click(function() { 
+            alert("Thank you! Your form has been submitted successfully");
+            $("joinform").submit(); 
+            $("joinform").hide(); 
+        });
+   /* do this - message pop up and a disclaimer*/
+   
+   
+   
+
+        </script>
+
+
+</html>

@@ -57,35 +57,16 @@ body {
   }
 
   .content {
-    margin-left: 19vw; /* Width of the sidenav + 4vw */
+    margin: 4vw 0;
+    margin-right: 4vw;
+    margin-left: 19vw; /* width of side nav + 4vw */
+    border: solid 1px red;
     display: flex;
-    padding: 4vw 0;
-    padding-right: 4vw;
+    padding: 1vw;
   }
 
-#one {
-    visibility: visible;
-    border: solid 1px red;
-}
-#two {
-    visibility: hidden;
-}
 
-#three {
-    visibility: hidden;
-}
-
-#four {
-    visibility: hidden;
-}
-
-
-
-
-
-
-
-  
+  /* do thissss!*/
   @media screen and (max-height: 450px) {
     .sidenav {padding-top: 15px;}
     .sidenav a {font-size: 18px;}

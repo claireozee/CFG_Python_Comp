@@ -22,13 +22,13 @@ def contact_page():
 def song():
     #We use the request module to easily collect all the data input into the form
     form_data = request.form
-    feeling = form_data["feeling"]
-    secondq = form_data["two"]
+    day = form_data["day"]
+    wanttofeel = form_data["wanttofeel"]
     results = birdie()
     #The second argument of the render_template method lets us send data into our html form
     #You can pass multiple things in - just separate them with commas
     #You can also pass in data in lists, and then pull out items from the list within the.html file itself!
-    return render_template("apiexample.html", results=results, feeling=feeling, secondq=secondq)
+    return render_template("apiexample.html", results=results, day=day, wanttofeel=wanttofeel)
 
 def birdie():
     load_dotenv()

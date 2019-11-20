@@ -41,4 +41,14 @@ def birdie():
     print results
     return results['items'][4]['name']
 
+def suggestion():
+    load_dotenv()
+    api_key = os.getenv("SPOTIFY_API_KEY")
+    api_secret = os.getenv("SPOTIFY_API_SECRET")
+    client_credentials_manager = SpotifyClientCredentials(api_key,api_secret)
+    spotify = spotipy.Spotify(client_credentials_manager=client_credentials_manager)
+    results = spotify.playlist_name_description(name='name', album_type='album')
+    print results
+    return results['items'][4]['name']
+
 app.run(debug=True)

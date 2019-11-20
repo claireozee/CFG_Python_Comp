@@ -1,23 +1,21 @@
 <!DOCTYPE html>
 <html>
-
     <head>
-        <title>Contact/join us</title>
+        <title>Our site</title>
         <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css')}}"/>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css')}}">
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/mdb.min.css')}}">
     </head>
 
 	<body>
         <div class="sidenav">
             <div class="sidenav-buttons">
-					<a href="{{ url_for('templates', filename='/index.html')}}">home</a>                    
-					<a href="{{ url_for('templates', filename='/apipage.html')}}">song</a>
-					<a href="#three">three</a>
-					<a href="{{ url_for('templates', filename='/contactus.html')}}">Contact us</a>
-				</div>
-                <div id="currently-playing">
-                    <span></span>
-                </div>
-            </div>
+				<a href="/">Home</a>                    
+				<a href="/apipage">Song</a>
+				<a href="#three">three</a>
+				<a href="/contactus">Contact us</a>
+			</div>
+        </div>
                       
             <div class="main">
                 <div class="header"></div>

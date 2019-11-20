@@ -1,29 +1,27 @@
 <!DOCTYPE html>
 <html>
-
     <head>
-        <title>Songs</title>
+        <title>Our site</title>
         <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css')}}"/>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css')}}">
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/mdb.min.css')}}">
     </head>
 
 	<body>
         <div class="sidenav">
-				<div class="sidenav-buttons">
-						<a href="/">Home</a>                    
-						<a href="/apipage">Song</a>
-						<a href="/ehoiew">three</a>
-						<a href="/contactus">Contact us</a>
-					</div>
-            <div id="currently-playing">
-                <span></span>
-            </div>
+            <div class="sidenav-buttons">
+				<a href="/">Home</a>                    
+				<a href="/apipage">Song</a>
+				<a href="#three">three</a>
+				<a href="/contactus">Contact us</a>
+			</div>
         </div>
                   
         <div class="main">
             <div class="header"></div>
             <div class="content">
                 <div id="songs">
-					<h3>songs</h3>
+					<h4>Songs</h4>
 					<p> info about how ....</p>
 					<form id="joinform" method='post' action='/apiexample'>
 						<label for="name" >How has your day been so far?</label>
@@ -39,14 +37,6 @@
 								<option value="3">Happy</option>
 								<option value="3">Energetic</option>
 								<option value="4">Excited</option>
-							</select>    
-						<br>
-						<label for="name">Your favourite genre is...</label>
-							<select name="..." required="required">
-								<option value="hh">Hip hop</option>
-								<option value="jz">Jazz</option>
-								<option value="fr">3</option>
-								<option value="rrr">mandon</option>
 							</select>    
 						<br>
 						<input type="submit" value="Submit" id="submit-button">

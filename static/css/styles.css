@@ -18,7 +18,6 @@ body {
   .sidenav a {
     padding: 2vh;
     text-decoration: none;
-    font-size: 25px;
     color: #818181; 
     border-bottom: 1px solid #818181; 
     display: flex;
@@ -27,29 +26,31 @@ body {
   }
   
   .sidenav-buttons {
-    border-top: 1px red solid;
     margin-top: 20vh;
+  }
+
+  .sidenav a {
+    border-bottom: 1px orange solid;
   }
 
   .sidenav a:hover {
     color: #f1f1f1;
+    background-color: orange;
+    opacity: 0.6;
   }
 
   .sidenav a:active{
     color: #f1f1f1;
-    background-color: red;
+    background-color: orange;
+    opacity: 1;
   }
   
-  #currently-playing {
-    background-color: red;
-  } /*fix this to show the song they've selected to currently play*/
-
   .main {
     font-size: 28px; /* Increased text to enable scrolling */
   }
 
   .header {
-    background-image: url(/Users/claireozee/documents/cfg_python/cfgsite/cfg_python_comp/static/images/header30.gif);
+    background-image: url("/Users/claireozee/documents/cfg_python/cfgsite/cfg_python_comp/static/images/header.gif");
     background-position: center;
     background-size: cover;
     height: 10vh;
@@ -60,13 +61,13 @@ body {
     margin: 4vw 0;
     margin-right: 4vw;
     margin-left: 19vw; /* width of side nav + 4vw */
-    border: solid 1px red;
+    border: solid 1px orange;
     display: flex;
     padding: 1vw;
   }
 
   .result {
-    border-bottom: 1px red solid;
+    border-bottom: 1px orange solid;
   }
 
   /* do thissss!*/

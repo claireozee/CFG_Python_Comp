@@ -17,8 +17,9 @@ body {
 
 .bi-soundwave {
     color:  orange; 
-    justify-content: start;
-   
+    position: absolute;
+    top: 0px;
+    left: 8%;
 }
   
 .collapse {
@@ -30,6 +31,10 @@ body {
 .collapse h2, p {
     margin: 0;
     padding: 2vh;
+}
+
+.collapse h2 {
+    margin-top: 10vh;
 }
 
 .sidenav a {
@@ -67,13 +72,18 @@ body {
 
 .more {
     color: white;
-    background-color: red;
     cursor: pointer;
-    padding: 1vh;
+    position: absolute;
+    right: 0;
 }
 
+.bi-three-dots-vertical {
+    padding: 1vh 0;
+}
 
-
+.bi-x {
+    padding: 1.5vh 1vh;
+}
 
 .header {
     padding: 5vw;

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Our site</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css')}}"/>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css')}}">
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/mdb.min.css')}}">
+    </head>
+
+	<body>
+        <div class="sidenav">
+            <div class="sidenav-buttons">
+				<a href="/">Home</a>                    
+				<a href="/apipage">Song</a>
+				<a href="/contactus">Contact us</a>
+			</div>
+        </div>
+                  
+        <div class="main">
+            <div class="header"></div>
+            <div class="content">
+                <div id="songs">
+					<h3>Songs</h3>
+					<p> info about how ....</p>
+					<form id="joinform" method='post' action='/apiexample'>
+						<label for="name" >How has your day been so far?</label>
+							<select name="day" required="required">
+								<option value="Happy">Amazing!</option>
+								<option value="Sad">Normal</option>
+								<option value="Excited">Terrible</option>
+							</select>
+						<br>
+						<label for="name">How do you want to feel?</label>
+							<select name="wanttofeel" required="required">
+								<option value="1">Sad</option>
+								<option value="3">Happy</option>
+								<option value="3">Energetic</option>
+								<option value="4">Excited</option>
+							</select>    
+						<br>
+						<input type="submit" value="Submit" id="submit-button">
+					</form>
+                </div>
+        
+            </div>
+        </div>
+
+
+
+    </body>
+    <script src="{{url_for('static', filename='js/jquery-3.3.1.min.js')}}"></script>
+    <script src="{{url_for('static', filename='js/bootstrap.min.js')}}"></script>
+    <script type="text/javascript">
+        $( "#about" ).click(function() {
+    $( "#one" ).toggle();
+});
+
+            
+        </script>
+
+
+</html>
+  
+  

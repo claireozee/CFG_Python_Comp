@@ -29,7 +29,7 @@ def song():
     #The second argument of the render_template method lets us send data into our html form
     #You can pass multiple things in - just separate them with commas
     #You can also pass in data in lists, and then pull out items from the list within the.html file itself!
-    return render_template("apiexample.html", results=results, day=day, wanttofeel=wanttofeel)import spotipy
+    return render_template("apiexample.html", results=results, day=day, wanttofeel=wanttofeel)
 
 #Logging in
 client_credentials_manager = SpotifyClientCredentials('5f9f12710cb54579a896598906e69ed3','67c212ed07004d908df6d4f3eac53ea4')

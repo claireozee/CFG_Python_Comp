@@ -3,75 +3,95 @@ body {
     margin: 0;
   }
   
-  .sidenav {
+.sidenav {
     height: 100vh;
-    width: 15vw;
+    width: 20vw;
     position: fixed;
     z-index: 1;
-    top: 0;
-    left: 0;
     background-color: #111;
     overflow-x: hidden;
-    padding-top: 2vh;
-  }
-  
-  .sidenav a {
-    padding: 2vh;
-    text-decoration: none;
-    color: #818181; 
-    border-bottom: 1px solid #818181; 
     display: flex;
     flex-direction: column;
     justify-content: center;
-  }
+}
+
+.bi-soundwave {
+    color:  orange; 
+    justify-content: start;
+   
+}
   
-  .sidenav-buttons {
-    margin-top: 20vh;
-  }
+.collapse {
+    justify-content: start;
+    right: 0;
+    color: #818181;
+}
 
-  .sidenav a {
+.collapse h2, p {
+    margin: 0;
+    padding: 2vh;
+}
+
+.sidenav a {
+    padding: 2vh;
+    text-decoration: none;
+    color: #818181; 
     border-bottom: 1px orange solid;
-  }
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    cursor: pointer;
+}
 
-  .sidenav a:hover {
-    color: #f1f1f1;
+.sidenav a:hover {
     background-color: orange;
     opacity: 0.6;
-  }
+}
 
-  .sidenav a:active{
+.sidenav a:active{
     color: #f1f1f1;
     background-color: orange;
     opacity: 1;
-  }
+}
   
-  .main {
-    font-size: 28px; /* Increased text to enable scrolling */
-  }
-
-  .header {
-    background-image: url("/Users/claireozee/documents/cfg_python/cfgsite/cfg_python_comp/static/images/header.gif");
-    background-position: center;
-    background-size: cover;
-    height: 10vh;
-    padding: 1em;
-  }
-
-  .content {
-    margin: 4vw 0;
-    margin-right: 4vw;
-    margin-left: 19vw; /* width of side nav + 4vw */
-    border: solid 1px orange;
+.main {
+    color: white;
+    height: 100vh;
+    padding-left: 20vw;
+    padding-right: 20vw;
+    font-size: 25px; /* Increased text to enable scrolling */
+    background-color: rgba(0, 0, 0, 0.88);
     display: flex;
-    padding: 1vw;
-  }
+    flex-direction: column;
+}
+
+.more {
+    color: white;
+    background-color: red;
+    cursor: pointer;
+    padding: 1vh;
+}
+
+
+
+
+.header {
+    padding: 5vw;
+    text-align: center;
+}
+
+.content {
+    margin: 5vw;
+    padding: 2vw;
+    border: solid 1px orange;
+}
 
   .result {
     border-bottom: 1px orange solid;
   }
 
-  /* do thissss!*/
+  /* do thissss!
   @media screen and (max-height: 450px) {
     .sidenav {padding-top: 15px;}
     .sidenav a {font-size: 18px;}
-  }
+  }*/

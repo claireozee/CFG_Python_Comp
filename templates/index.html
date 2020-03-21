@@ -3,33 +3,82 @@
     <head>
         <title>Our site</title>
         <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css')}}"/>
-        <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css')}}">
-		<link rel="stylesheet" href="{{ url_for('static', filename='css/mdb.min.css')}}">
     </head>
 
 	<body>
         <div class="sidenav">
+            <svg class="bi bi-soundwave" width="8em" height="8em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path stroke="#000" stroke-linecap="round" d="M2.5 7v2m12-2v2m-2-3v4m-8-4v4m4-7.5v11m-2-9v7m4-7v7"/>
+            </svg>
             <div class="sidenav-buttons">
-				<a href="/">Home</a>                    
-				<a href="/apipage">Song</a>
-				<a href="#three">three</a>
-				<a href="/contactus">Contact us</a>
+				<a class="home-button" href="/">Home</a>
+				<a class="song-button">Song</a>
+				<a class="contact-button">Contact us</a>
 			</div>
         </div>
-                  
+        <div class="sidenav collapse">
+            <svg class="bi bi-x more" width="1.5em" height="1.5em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" d="M11.854 4.146a.5.5 0 010 .708l-7 7a.5.5 0 01-.708-.708l7-7a.5.5 0 01.708 0z" clip-rule="evenodd"/>
+                <path fill-rule="evenodd" d="M4.146 4.146a.5.5 0 000 .708l7 7a.5.5 0 00.708-.708l-7-7a.5.5 0 00-.708 0z" clip-rule="evenodd"/>
+            </svg>
+            <h2>Recently Played</h2>
+            <p>show recent songs played here</p>
+
+        </div>
+
         <div class="main">
-            <div class="header">
-                <img src="/Users/claireozee/documents/cfg_python/cfgsite/cfg_python_comp/static/images/header5.gif">
-            </div>
-            <div class="content">
-                <div id="home">
-                    <h3>us</h3>
-                    <p>intro...</p>
+            <svg class="bi bi-three-dots-vertical more" width="1.5em" height="1.5em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" d="M9.5 13a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zm0-5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zm0-5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z" clip-rule="evenodd"/>
+              </svg>
+            <div class="home">
+                <div class="header">
+                    <h1>TITLE OF PAGE HERE</h1>
                 </div>
-                
-
-
+                <div class="content">
+                    <p>us & intro...</p></br>
+                    <p>us & intro...</p></br>
+                    <p>us & intro...</p>
+                </div>
             </div>
+        
+            <div class="song">
+                <div class="header">
+                    <h1>SONGS (API HERE)</h1>
+                </div>
+                <div class="content">
+                    <p>SONGS (API HERE)</p></br>
+                    <p>SONGS (API HERE)</p></br>
+                    <p>SONGS (API HERE)</p></br>
+                    <p>SONGS (API HERE)</p>
+                </div>
+            </div>
+
+            <div class="contact">
+                <div class="header">
+                    <h1>JOIN US</h1>
+                </div>
+                <div class="content">
+                    <p>Sign up today for our free 3 day trial!
+                        Become a member for just £2.99 per month!</p>
+
+                    <form id="joinform">
+						<div class="form-group">
+							<label for="name" >Your name:</label>
+							<input type="name" name="name" id="name" placeholder="Your name"required="required">
+						</div>
+						<div class="form-group">
+                            <label for="membership">Select your level of commitment:</label>                                    
+                            <select name="membership" required="required">
+                                <option value="standard">Standard Membership - £2.99 per month</option>
+                                <option value="bonus">Exclusive Membership - £8.99 per month</option>
+                                <option value="top tier">Top Tier Membership - £14.99 per month</option>
+                            </select>
+					    </div>
+						<button type="submit" id="form-submit-button">Submit</button>
+					</form>
+                </div>
+            </div>
+
         </div>
 
 
@@ -38,13 +87,32 @@
     <script src="{{url_for('static', filename='js/jquery-3.3.1.min.js')}}"></script>
     <script src="{{url_for('static', filename='js/bootstrap.min.js')}}"></script>
     <script type="text/javascript">
-        $( "#about" ).click(function() {
-    $( "#one" ).toggle();
-});
+        $(document).ready(function(){
+            $(".home").show();
+            $(".song").hide();
+            $(".contact").hide();
+            $(".collapse").hide();
 
-            
-        </script>
-
-
+            $(".home-button").click(function() {
+                $(".home-button").css("background-color", "blue");
+                $(".home").show();
+                $(".song").hide();
+                $(".contact").hide();
+            });
+            $(".song-button").click(function() {
+                $(".song").show();
+                $(".home").hide();
+                $(".contact").hide();
+            });
+            $(".contact-button").click(function() {
+                $(".contact").show();
+                $(".home").hide();
+                $(".song").hide();
+            });
+            $(".more").click(function() {
+                $(".collapse").slideToggle("right");
+            });  
+        });
+    </script>
 </html>
   

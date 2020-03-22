@@ -35,8 +35,12 @@
                 <path fill-rule="evenodd" d="M4.146 4.146a.5.5 0 000 .708l7 7a.5.5 0 00.708-.708l-7-7a.5.5 0 00-.708 0z" clip-rule="evenodd"/>
             </svg>
             <h2>Recently Played</h2>
-            <p>show recent songs played here</p>
-
+            <div class="recently-played">
+                <a class="recentsong">song song song songsongsongsongsongsongsongsongsong</a>
+                <a class="recentsong">song song</a>
+                <a class="recentsong">song song</a>
+                <a class="recentsong">song song</a>
+            </div>
         </div>
 
         <div class="main">
@@ -136,20 +140,6 @@
                 $(".song").hide();
             });
 
-            $(".more").click(function() {
-                $(".collapse").animate({
-                    width: 'toggle'
-                });
-            });
-
-
-
-            //$(".more").click(function() {
-            //    $(".collapse").toggle("slide", {
-            //        direction:'right'
-            //    });
-            //});  
-
             //contact links
             $(".contacticon").mouseover(function() {
                 $(".disclaimer").css("visibility", "visible");
@@ -157,6 +147,43 @@
             $(".contacticon").mouseout(function() {
                 $(".disclaimer").css("visibility", "hidden");
             });
+
+            //collapsible nav
+            $(".more").click(function() {
+                $(".collapse").animate({
+                    width: 'toggle'
+                });
+            });
+            //$(".recently-played").hover(function() {
+            //    $(this).scroll(function() {
+            //        $(this).text(x += 1);
+            //    });
+            //});
+            
+            var intervalID;
+            $(".recentsong").hover(function(){
+                var $this = $(this);
+                intervalID = setInterval(function() {
+                    scroll($this);
+                }, 100);
+            }, function() {
+                clearInterval(intervalID);
+            });
+
+            function scroll(ele){
+                var s = ele.text().substr(1)+ele.text().substr(0,1);
+                ele.text(s);
+            }
+
+
+
+        //form
+        $("button").click(function() { 
+            alert("Thank you! Your form has been submitted successfully.");
+            $("joinform").submit(); 
+            $("joinform").hide(); 
+        });
+
         });
     </script>
 </html>

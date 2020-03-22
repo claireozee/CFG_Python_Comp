@@ -1,7 +1,7 @@
 body {
     font-family: "Lato", sans-serif;
     margin: 0;
-  }
+}
   
 .sidenav {
     height: 100vh;
@@ -28,6 +28,7 @@ body {
 
 .sidenav a:hover {
     background-color: orange;
+    color: #f1f1f1;
     opacity: 0.9;
 }
 
@@ -40,22 +41,43 @@ body {
 .active {
     background-color: orange;
     opacity: 0.6;
-    color: #f1f1f1;
 }
 
 .bi-soundwave {
-    color:  orange; 
     position: absolute;
     top: 0px;
     left: 8%;
+    color: green;
 }
 
 .contact-here {
+    width: 100%;
     position: absolute;
-    bottom: 1%;
-    left: 8%;
-    border: solid orange 1px;
-    color: ;
+    bottom: 1vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.bi-at {
+    padding-top: 1%;
+}
+
+.bi-at, .bi-envelope {
+    cursor: pointer;
+    color: rgb(255, 165, 0, 0.6)
+}
+
+.bi-at:hover, .bi-envelope:hover {
+    cursor: pointer;
+    color: orange;
+}
+
+.disclaimer {
+    color: orange;
+    padding: 0;
+    
 }
 
 .more {

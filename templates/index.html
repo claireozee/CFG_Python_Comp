@@ -107,7 +107,9 @@
             $(".home").show();
             $(".song").hide();
             $(".contact").hide();
-            $(".collapse").hide();
+            $(".collapse").animate({
+                width: 'toggle'
+            });
 
             $(".home-button").click(function() {
                 $(".home-button").addClass("active");
@@ -133,9 +135,20 @@
                 $(".home").hide();
                 $(".song").hide();
             });
+
             $(".more").click(function() {
-                $(".collapse").slideToggle("right");
-            });  
+                $(".collapse").animate({
+                    width: 'toggle'
+                });
+            });
+
+
+
+            //$(".more").click(function() {
+            //    $(".collapse").toggle("slide", {
+            //        direction:'right'
+            //    });
+            //});  
 
             //contact links
             $(".contacticon").mouseover(function() {

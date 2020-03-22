@@ -15,33 +15,11 @@ body {
     justify-content: center;
 }
 
-.bi-soundwave {
-    color:  orange; 
-    position: absolute;
-    top: 0px;
-    left: 8%;
-}
-  
-.collapse {
-    justify-content: start;
-    right: 0;
-    color: #818181;
-}
-
-.collapse h2, p {
-    margin: 0;
-    padding: 2vh;
-}
-
-.collapse h2 {
-    margin-top: 10vh;
-}
-
 .sidenav a {
     padding: 2vh;
     text-decoration: none;
     color: #818181; 
-    border-bottom: 1px orange solid;
+    border-bottom: 1px rgb(255, 165, 0, 0.6) solid;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -50,7 +28,7 @@ body {
 
 .sidenav a:hover {
     background-color: orange;
-    opacity: 0.6;
+    opacity: 0.9;
 }
 
 .sidenav a:active{
@@ -59,15 +37,25 @@ body {
     opacity: 1;
 }
   
-.main {
-    color: white;
-    height: 100vh;
-    padding-left: 20vw;
-    padding-right: 20vw;
-    font-size: 25px; /* Increased text to enable scrolling */
-    background-color: rgba(0, 0, 0, 0.88);
-    display: flex;
-    flex-direction: column;
+.active {
+    background-color: orange;
+    opacity: 0.6;
+    color: #f1f1f1;
+}
+
+.bi-soundwave {
+    color:  orange; 
+    position: absolute;
+    top: 0px;
+    left: 8%;
+}
+
+.contact-here {
+    position: absolute;
+    bottom: 1%;
+    left: 8%;
+    border: solid orange 1px;
+    color: ;
 }
 
 .more {
@@ -83,6 +71,32 @@ body {
 
 .bi-x {
     padding: 1.5vh 1vh;
+}
+
+.collapse {
+    justify-content: start;
+    right: 0;
+    color: #818181;
+}
+
+.collapse h2, p {
+    margin: 0;
+    padding: 2vh;
+}
+
+.collapse h2 {
+    margin-top: 10vh;
+}
+
+.main {
+    color: white;
+    height: 100vh;
+    padding-left: 20vw;
+    padding-right: 20vw;
+    font-size: 25px; /* Increased text to enable scrolling */
+    background-color: rgba(0, 0, 0, 0.88);
+    display: flex;
+    flex-direction: column;
 }
 
 .header {

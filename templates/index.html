@@ -11,10 +11,13 @@
                 <path stroke="#000" stroke-linecap="round" d="M2.5 7v2m12-2v2m-2-3v4m-8-4v4m4-7.5v11m-2-9v7m4-7v7"/>
             </svg>
             <div class="sidenav-buttons">
-				<a class="home-button" href="/">Home</a>
+				<a class="home-button active" href="/">Home</a>
 				<a class="song-button">Song</a>
 				<a class="contact-button">Contact us</a>
-			</div>
+            </div>
+            <div class="contact-here">
+                icons
+            </div>
         </div>
         <div class="sidenav collapse">
             <svg class="bi bi-x more" width="1.5em" height="1.5em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -88,23 +91,34 @@
     <script src="{{url_for('static', filename='js/bootstrap.min.js')}}"></script>
     <script type="text/javascript">
         $(document).ready(function(){
+            $(".home-button").addClass("active");
+            $(".song-button").removeClass("active");
+            $(".contact-button").removeClass("active");
             $(".home").show();
             $(".song").hide();
             $(".contact").hide();
             $(".collapse").hide();
 
             $(".home-button").click(function() {
-                $(".home-button").css("background-color", "blue");
+                $(".home-button").addClass("active");
+                $(".song-button").removeClass("active");
+                $(".contact-button").removeClass("active");
                 $(".home").show();
                 $(".song").hide();
                 $(".contact").hide();
             });
             $(".song-button").click(function() {
+                $(".song-button").addClass("active");
+                $(".home-button").removeClass("active");
+                $(".contact-button").removeClass("active");
                 $(".song").show();
                 $(".home").hide();
                 $(".contact").hide();
             });
             $(".contact-button").click(function() {
+                $(".contact-button").addClass("active");
+                $(".home-button").removeClass("active");
+                $(".song-button").removeClass("active");
                 $(".contact").show();
                 $(".home").hide();
                 $(".song").hide();

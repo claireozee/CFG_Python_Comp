@@ -113,22 +113,11 @@ body {
 
 .recently-played a {
     padding: 1vh;
-}
-
-.recently-played {
     white-space: nowrap;
     text-overflow: ellipsis;
-    width: 100%;
     display: block;
     overflow: hidden;
 }
-
-
-
-
-
-
-
 
 
 

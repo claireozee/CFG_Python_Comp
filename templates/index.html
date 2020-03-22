@@ -36,6 +36,11 @@
             </svg>
             <h2>Recently Played</h2>
             <div class="recently-played">
+                <!--play icon on the one selected
+                <svg class="bi bi-play-fill" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M11.596 8.697l-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 010 1.393z"/>
+                </svg>
+                -->
                 <a class="recentsong">song song song songsongsongsongsongsongsongsongsong</a>
                 <a class="recentsong">song song</a>
                 <a class="recentsong">song song</a>
@@ -160,20 +165,20 @@
             //    });
             //});
             
-            var intervalID;
-            $(".recentsong").hover(function(){
-                var $this = $(this);
-                intervalID = setInterval(function() {
-                    scroll($this);
-                }, 100);
-            }, function() {
-                clearInterval(intervalID);
-            });
+        var intervalID;
+        $(".recentsong").hover(function(){
+            var $this = $(this);
+            intervalID = setInterval(function() {
+                scroll($this);
+            }, 200);
+        }, function() {
+            clearInterval(intervalID);
+        });
 
-            function scroll(ele){
-                var s = ele.text().substr(1)+ele.text().substr(0,1);
-                ele.text(s);
-            }
+        function scroll(ele){
+            var s = ele.text().substr(1)+ele.text().substr(0,1);
+            ele.text(s);
+        }
 
 
 

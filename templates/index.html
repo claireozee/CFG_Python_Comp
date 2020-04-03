@@ -68,51 +68,33 @@
                     <h1>SONGS (API HERE)</h1>
                 </div>
                 <div class="content">
-
-
-                    <div>
-                    <form class="moodform" method='post' action='/'> <!--check the action endpoint-->
-                        <label for="name">Name:</label>
-                        <input type="name" name="name" id="name" placeholder="Your name" required="required">
-                        <label for="name">Select your current mood</label>
-                            <select name="currentmood" required="required">
-                                <option value="Happy">Amazing!</option> <!-- change these -->
-                                <option value="Sad">Normal</option>
-                                <option value="Excited">Terrible</option>
-                            </select><br/>
-                            <!--option to select mood or fror us to suggest a playlist-->
-                        <label for="name">How do you want to feel?</label>
-						    <select name="wanttofeel" required="required">
-    							<option value="1">Sad</option>
-	    						<option value="3">Happy</option>
-								<option value="3">Energetic</option>
-		    					<option value="4">Excited</option>
-			    			</select><br>
-						<input type="submit" value="Submit" id="submit-button">
-                    </form>
+                    <div class="api-input">
+                        <form class="moodform" method="post" action='/'> <!--check the action endpoint-->
+                            <label for="name">Name:</label>
+                            <input type="name" name="name" id="name" placeholder="Your name" required="required"><br/><br/>
+                            <label for="name">Select your current mood</label>
+                                <select name="currentmood" required="required">
+                                    <option value="Happy">Amazing!</option> <!-- change these -->
+                                    <option value="Sad">Normal</option>
+                                    <option value="Excited">Terrible</option>
+                                </select><br/><br/>
+                                <!--option to select mood or fror us to suggest a playlist-->
+                            <label for="name">How do you want to feel?</label>
+			    			    <select name="wanttofeel" required="required">
+    			    				<option value="1">Sad</option>
+	    			    			<option value="3">Happy</option>
+						    		<option value="3">Energetic</option>
+		    				    	<option value="4">Excited</option>
+    			    			</select><br><br/>
+	    					<input type="submit" value="Submit" id="api-submit">
+                        </form>
                     </div>
-
-                    <div>
+                    <div class="api-output">
                         <p>OUTCOME:</p>
                         aiiiight {{name}}, you're currently {{currentmood}}
                         {{wanttofeel}}
-
-
-
-
-
-
+                        <p>SONGS (API HERE)</p>
                     </div>
-
-
-
-
-
-
-                    <p>SONGS (API HERE)</p></br>
-                    <p>SONGS (API HERE)</p></br>
-                    <p>SONGS (API HERE)</p></br>
-                    <p>SONGS (API HERE)</p>
                 </div>
             </div>
 
@@ -185,6 +167,14 @@
                 $(".home").hide();
                 $(".song").hide();
             });
+
+            $("#api-submit").click(function(e) {
+                e.preventDefault();
+                $(".api-input").hide();
+                $(".api-output").show();
+            });
+
+
 
             //contact links
             $(".contacticon").mouseover(function() {

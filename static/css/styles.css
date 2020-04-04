@@ -16,6 +16,21 @@ body {
     justify-content: center;
 }
 
+#logo {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    text-shadow: 1px 1px 10px rgb(255, 165, 0, 0.6), -1px -1px 10px rgb(255, 165, 0, 0.6);
+}
+
+.sidenav h2 {
+    position: absolute;
+    top: 25%;
+}
+
 .sidenav a {
     padding: 2vh;
     text-decoration: none;
@@ -42,13 +57,6 @@ body {
 .active {
     background-color: orange;
     opacity: 0.6;
-}
-
-.bi-soundwave {
-    position: absolute;
-    top: 0px;
-    left: 8%;
-    color: green;
 }
 
 .contact-here {
@@ -109,6 +117,7 @@ body {
 
 .collapse h2 {
     margin-top: 10vh;
+    position: static;
 }
 
 .recently-played a {
